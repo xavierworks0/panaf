@@ -1,0 +1,1116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+.farms-page {
+  --farms-green: #183d2b;
+  --farms-dark: #10291e;
+  --farms-cream: #f5f3eb;
+  --farms-muted: #777b70;
+  --farms-accent: #c6a66b;
+  background: var(--farms-cream);
+  color: var(--farms-dark);
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+}
+
+.farms-page *,
+.farms-page *::before,
+.farms-page *::after {
+  box-sizing: border-box;
+}
+
+.farms-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.farms-page img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.farms-header {
+  min-height: 84px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--farms-cream);
+}
+
+.farms-logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 1px;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+}
+
+.farms-logo > span {
+  color: #a78040;
+}
+
+.farms-logo small {
+  margin-left: 7px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.farms-back {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  transition: color 0.2s ease;
+}
+
+.farms-back:hover,
+.farms-footer > a:last-child:hover {
+  color: #a78040;
+}
+
+.farms-hero {
+  position: relative;
+  min-height: 650px;
+  min-height: min(760px, 82vh);
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: #233b2b;
+  color: #fff;
+}
+
+.farms-hero-image,
+.farms-hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.farms-hero-image {
+  z-index: -2;
+  object-position: center 55%;
+  animation: farms-image-reveal 1.2s ease both;
+}
+
+.farms-hero-overlay {
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 30, 20, 0.86) 0%,
+      rgba(10, 30, 20, 0.58) 45%,
+      rgba(10, 30, 20, 0.08) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10, 30, 20, 0.32),
+      transparent 40%
+    );
+}
+
+.farms-hero-content {
+  width: min(760px, 100%);
+  padding: 90px 0 105px 10%;
+  animation: farms-content-reveal 0.8s ease both;
+}
+
+.farms-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 30px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.3px;
+  text-transform: uppercase;
+}
+
+.farms-eyebrow > span {
+  width: 25px;
+  height: 1px;
+  background: var(--farms-accent);
+}
+
+.farms-hero h1,
+.farms-intro h2,
+.farms-focus-heading h2,
+.farms-principles h2,
+.farms-contact h2 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  line-height: 1.03;
+}
+
+.farms-hero h1 {
+  font-size: clamp(76px, 10vw, 132px);
+}
+
+.farms-hero h1 em,
+.farms-intro h2 em,
+.farms-focus-heading h2 em,
+.farms-principles h2 em,
+.farms-contact h2 em {
+  font-weight: 500;
+}
+
+.farms-hero h1 em {
+  color: #d8c59e;
+}
+
+.farms-hero-description {
+  max-width: 420px;
+  margin: 27px 0 34px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.farms-primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 51px;
+  padding: 0 23px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.farms-primary-button:hover {
+  background: var(--farms-cream);
+  border-color: var(--farms-cream);
+  color: var(--farms-dark);
+}
+
+.farms-hero-location {
+  position: absolute;
+  right: 7%;
+  bottom: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.farms-intro,
+.farms-focus,
+.farms-contact {
+  padding: 105px 10%;
+}
+
+.farms-section-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(24, 61, 43, 0.2);
+  color: var(--farms-muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.farms-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 80px;
+  padding-top: 66px;
+}
+
+.farms-intro h2,
+.farms-focus-heading h2,
+.farms-contact h2 {
+  font-size: clamp(52px, 6vw, 78px);
+}
+
+.farms-intro h2 em,
+.farms-contact h2 em {
+  color: #7a8a68;
+}
+
+.farms-intro-copy {
+  max-width: 480px;
+}
+
+.farms-intro-copy p,
+.farms-focus-heading > p,
+.farms-contact-copy > p {
+  color: #666d62;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.farms-intro-copy p + p {
+  margin-top: 20px;
+}
+
+.farms-focus {
+  padding-top: 30px;
+  padding-bottom: 125px;
+}
+
+.farms-focus-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 45px;
+  padding: 60px 0 45px;
+}
+
+.farms-focus-heading h2 {
+  flex-shrink: 0;
+}
+
+.farms-focus-heading h2 em {
+  color: #7a8a68;
+}
+
+.farms-focus-heading > p {
+  max-width: 340px;
+  margin: 0 0 6px;
+}
+
+.farms-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.farms-card {
+  min-width: 0;
+  background: #eeece3;
+  transition: transform 0.3s ease;
+}
+
+.farms-card:hover {
+  transform: translateY(-6px);
+}
+
+.farms-card-image {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  background: #d6d9ce;
+}
+
+.farms-card-image img {
+  height: 100%;
+  transition: transform 0.65s ease;
+}
+
+.farms-card:hover .farms-card-image img {
+  transform: scale(1.05);
+}
+
+.farms-card-image > span {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  background: var(--farms-cream);
+  color: var(--farms-green);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.farms-card-copy {
+  padding: 26px 24px 30px;
+}
+
+.farms-card-copy h3 {
+  margin: 0 0 12px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.farms-card-copy p {
+  margin: 0;
+  color: #72766b;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.farms-principles {
+  position: relative;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 95px 10%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(194, 166, 107, 0.15),
+      transparent 42%
+    ),
+    var(--farms-green);
+  color: #fff;
+}
+
+.farms-principles-content {
+  max-width: 620px;
+}
+
+.farms-principles h2 {
+  margin: 0 0 26px;
+  font-size: clamp(60px, 7vw, 90px);
+}
+
+.farms-principles h2 em {
+  color: #d8c59e;
+}
+
+.farms-principles-content > p:not(.farms-eyebrow) {
+  max-width: 500px;
+  margin: 0 0 30px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 2;
+}
+
+.farms-outline-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 49px;
+  padding: 0 21px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: background 0.25s ease;
+}
+
+.farms-outline-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.farms-contact {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.farms-contact h2 {
+  margin-top: 45px;
+}
+
+.farms-contact-copy > p {
+  max-width: 410px;
+  margin-top: 23px;
+}
+
+.farms-contact-actions {
+  border-top: 1px solid rgba(24, 61, 43, 0.22);
+}
+
+.farms-contact-actions > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 26px 0;
+  border-bottom: 1px solid rgba(24, 61, 43, 0.22);
+  transition: color 0.2s ease;
+}
+
+.farms-contact-actions > a:hover {
+  color: #987542;
+}
+
+.farms-contact-actions > a > span:first-child {
+  display: grid;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.farms-contact-actions small {
+  color: var(--farms-muted);
+  font-size: 9px;
+  letter-spacing: 1.6px;
+}
+
+.farms-contact-actions > a > span:last-child {
+  font-size: 20px;
+}
+
+.farms-footer {
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 25px 7%;
+  border-top: 1px solid rgba(24, 61, 43, 0.15);
+}
+
+.farms-footer > span,
+.farms-footer > a:last-child {
+  color: var(--farms-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+@keyframes farms-image-reveal {
+  from {
+    transform: scale(1.04);
+    opacity: 0.7;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes farms-content-reveal {
+  from {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .farms-intro,
+  .farms-focus,
+  .farms-contact {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .farms-intro-grid {
+    gap: 35px;
+  }
+
+  .farms-focus-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .farms-card-grid {
+    gap: 15px;
+  }
+
+  .farms-card-image {
+    height: 220px;
+  }
+
+  .farms-card-copy {
+    padding: 22px 18px 25px;
+  }
+
+  .farms-card-copy h3 {
+    font-size: 21px;
+  }
+
+  .farms-contact {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .farms-header {
+    min-height: 72px;
+    padding: 0 6%;
+  }
+
+  .farms-logo {
+    font-size: 24px;
+  }
+
+  .farms-back {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .farms-hero {
+    min-height: 650px;
+    min-height: 78svh;
+  }
+
+  .farms-hero-image {
+    object-position: 58% center;
+  }
+
+  .farms-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 30, 20, 0.84),
+      rgba(10, 30, 20, 0.38)
+    );
+  }
+
+  .farms-hero-content {
+    padding: 75px 7%;
+  }
+
+  .farms-hero h1 {
+    font-size: clamp(72px, 17vw, 105px);
+  }
+
+  .farms-hero-description {
+    max-width: 360px;
+    font-size: 14px;
+  }
+
+  .farms-hero-location {
+    right: 7%;
+    bottom: 24px;
+    font-size: 8px;
+  }
+
+  .farms-intro,
+  .farms-focus,
+  .farms-contact {
+    padding: 75px 7%;
+  }
+
+  .farms-section-label {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .farms-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-top: 45px;
+  }
+
+  .farms-intro h2,
+  .farms-focus-heading h2,
+  .farms-contact h2 {
+    font-size: clamp(52px, 13vw, 70px);
+  }
+
+  .farms-focus {
+    padding-top: 0;
+    padding-bottom: 85px;
+  }
+
+  .farms-focus-heading {
+    padding: 45px 0 32px;
+  }
+
+  .farms-card-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .farms-card-image {
+    height: 260px;
+  }
+
+  .farms-card-copy {
+    padding: 24px;
+  }
+
+  .farms-card-copy h3 {
+    font-size: 25px;
+  }
+
+  .farms-principles {
+    min-height: 480px;
+    padding: 75px 7%;
+  }
+
+  .farms-principles h2 {
+    font-size: clamp(60px, 14vw, 78px);
+  }
+
+  .farms-contact {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .farms-contact h2 {
+    margin-top: 35px;
+  }
+
+  .farms-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px 7%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .farms-page *,
+  .farms-page *::before,
+  .farms-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.farms-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.farms-filter {
+  padding: 13px 20px;
+  border: 1px solid rgba(24, 61, 43, 0.25);
+  background: transparent;
+  color: var(--farms-green);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.farms-filter:hover,
+.farms-filter.active {
+  border-color: var(--farms-green);
+  background: var(--farms-green);
+  color: #fff;
+}
+
+.farms-filter span {
+  color: var(--farms-accent);
+}
+
+.farms-results-count {
+  margin: 0 0 25px;
+  color: var(--farms-muted);
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.farms-card-category {
+  display: block;
+  margin-bottom: 12px;
+  color: #7a8a68;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.farms-card-link {
+  display: inline-block;
+  margin-top: 22px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(24, 61, 43, 0.35);
+  color: var(--farms-green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.farms-card-link:hover {
+  color: #a78040;
+}
+
+.farms-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 650px) {
+  .farms-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .farms-filter {
+    padding: 11px 14px;
+  }
+}
+.farms-journey,
+.farms-faq {
+  padding: 100px 10%;
+  background: #eeece3;
+}
+
+.farms-journey-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: end;
+  gap: 60px;
+  padding: 60px 0 55px;
+}
+
+.farms-journey-heading h2,
+.farms-faq-layout h2 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(52px, 6vw, 76px);
+  font-weight: 500;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.farms-journey-heading h2 em,
+.farms-faq-layout h2 em {
+  color: #7a8a68;
+  font-weight: 500;
+}
+
+.farms-journey-heading > p,
+.farms-faq-layout > div:first-child > p {
+  max-width: 440px;
+  margin: 0;
+  color: #666d62;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.farms-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(24, 61, 43, 0.22);
+}
+
+.farms-step {
+  padding: 30px 22px 10px 0;
+}
+
+.farms-step + .farms-step {
+  padding-left: 22px;
+  border-left: 1px solid rgba(24, 61, 43, 0.18);
+}
+
+.farms-step-number {
+  color: #9b7b45;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.farms-step h3 {
+  margin: 28px 0 12px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.farms-step p {
+  margin: 0;
+  color: #72766b;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.farms-faq {
+  background: var(--farms-cream);
+}
+
+.farms-faq-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 80px;
+  padding-top: 65px;
+}
+
+.farms-faq-layout > div:first-child > p {
+  margin-top: 22px;
+}
+
+.farms-faq-list {
+  border-top: 1px solid rgba(24, 61, 43, 0.25);
+}
+
+.farms-faq-item {
+  border-bottom: 1px solid rgba(24, 61, 43, 0.2);
+}
+
+.farms-faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 23px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.farms-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.farms-faq-icon {
+  flex-shrink: 0;
+  color: #8c744d;
+  font-size: 23px;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+}
+
+.farms-faq-item[open] .farms-faq-icon {
+  transform: rotate(45deg);
+}
+
+.farms-faq-item > p {
+  margin: -3px 35px 23px 0;
+  color: #6c7268;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.farms-faq-item summary:focus-visible {
+  outline: 2px solid #8c744d;
+  outline-offset: 5px;
+}
+
+@media (max-width: 800px) {
+  .farms-journey,
+  .farms-faq {
+    padding: 75px 7%;
+  }
+
+  .farms-journey-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 45px 0;
+  }
+
+  .farms-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .farms-step {
+    padding: 25px 18px 25px 0;
+  }
+
+  .farms-step + .farms-step {
+    padding-left: 18px;
+  }
+
+  .farms-step:nth-child(3) {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(24, 61, 43, 0.18);
+  }
+
+  .farms-step:nth-child(4) {
+    border-top: 1px solid rgba(24, 61, 43, 0.18);
+  }
+
+  .farms-faq-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .farms-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .farms-step,
+  .farms-step + .farms-step,
+  .farms-step:nth-child(3),
+  .farms-step:nth-child(4) {
+    padding: 24px 0;
+    border-left: none;
+    border-top: 1px solid rgba(24, 61, 43, 0.18);
+  }
+
+  .farms-step:first-child {
+    border-top: none;
+  }
+}
+
+.farms-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 82px;
+  padding: 0 5%;
+  gap: 25px;
+  border-bottom: 1px solid rgba(24, 61, 43, 0.1);
+  background: rgba(245, 243, 235, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.farms-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.5vw, 34px);
+}
+
+.farms-nav a {
+  color: #596258;
+  font-size: 11px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.farms-nav a:hover {
+  color: #a78040;
+}
+
+.farms-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.farms-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 43px;
+  padding: 0 17px;
+  background: var(--farms-green);
+  color: #fff !important;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+
+.farms-header-cta:hover {
+  background: #28563d;
+}
+
+.farms-header-cta span {
+  color: #d8c59e;
+  font-size: 14px;
+}
+
+.farms-page {
+  scroll-behavior: smooth;
+}
+
+.farms-page section[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 950px) {
+  .farms-header {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 17px 5%;
+  }
+
+  .farms-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 13px;
+    border-top: 1px solid rgba(24, 61, 43, 0.12);
+  }
+
+  .farms-header-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .farms-header {
+    min-height: auto;
+    padding: 16px 5%;
+  }
+
+  .farms-header-actions {
+    gap: 10px;
+  }
+
+  .farms-header-actions .farms-back {
+    display: none;
+  }
+
+  .farms-header-cta {
+    min-height: 38px;
+    padding: 0 11px;
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  .farms-nav {
+    gap: 22px;
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+
+  .farms-nav a {
+    flex-shrink: 0;
+    font-size: 10px;
+  }
+}
+
+/* Scroll reveal */
+.farms-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+.farms-reveal.farms-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Refined image interactions */
+.farms-card-image {
+  background: #dfe3d7;
+}
+
+.farms-card-image img {
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.65, 0.3, 1),
+    filter 0.5s ease;
+}
+
+.farms-card:hover .farms-card-image img {
+  transform: scale(1.06);
+  filter: saturate(1.08);
+}
+
+/* Gold accent line */
+.farms-journey .farms-section-label::after {
+  content: '';
+  width: 42px;
+  height: 1px;
+  background: var(--farms-accent);
+  align-self: center;
+}
+
+/* Accessible motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .farms-reveal,
+  .farms-reveal.farms-revealed,
+  .farms-card-image img {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
