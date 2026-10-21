@@ -41,7 +41,7 @@ const businesses = [
   {
     number: '04',
     category: 'PUBLISHING',
-    name: 'Panaf Publishing Company',
+    name: 'LawLords Publications',
     description:
       'Bringing ideas, knowledge and stories to life through thoughtful publishing.',
     image:
@@ -429,7 +429,7 @@ if (
               <option>Panaf Supermarket</option>
               <option>Jide Olakanmi Law Firm</option>
               <option>Panaf Farms</option>
-              <option>Panaf Publishing Company</option>
+              <option>LawLords Publications</option>
               <option>Panaf Real Estate</option>
               <option>Panaf Paralegal School</option>
               <option>Careers</option>

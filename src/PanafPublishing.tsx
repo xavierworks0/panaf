@@ -131,7 +131,7 @@ export default function PanafPublishing() {
 
           <p>
             From your first manuscript to a finished book,
-            PANAF Publishing Company helps bring written
+            LawLords Publications helps bring written
             ideas closer to publication. We also provide
             access to law books and reading materials.
           </p>
@@ -162,7 +162,7 @@ export default function PanafPublishing() {
             </div>
 
             <div className="pub-book pub-book-front">
-              <span>PANAF PUBLISHING</span>
+              <span>LawLords Publications</span>
               <div className="pub-book-emblem">P.</div>
               <strong>YOUR WORDS.<br />YOUR LEGACY.</strong>
               <i />
@@ -334,7 +334,7 @@ export default function PanafPublishing() {
       href="mailto:panafpress2010@yahoo.com?subject=Law%20Book%20Enquiry"
       className="pub-button pub-button-light"
     >
-      Contact PANAF Publishing <span>↗</span>
+      Contact LawLords Publications <span>↗</span>
     </a>
   </div>
 </section>
@@ -476,14 +476,14 @@ export default function PanafPublishing() {
           from you.
         </p>
         <a className="pub-button pub-button-light" href={publishingEmail}>
-          Contact PANAF Publishing <span>↗</span>
+          Contact LawLords Publications <span>↗</span>
         </a>
       </section>
 
       <footer className="pub-footer">
         <a className="pub-brand" href="/">
-          PANAF<span>.</span>
-          <small>PUBLISHING COMPANY</small>
+          LawLords<span>.</span>
+          <small>Publications</small>
         </a>
 
         <span>Books, ideas and publishing.</span>
