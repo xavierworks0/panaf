@@ -165,8 +165,8 @@ const JideOlakanmiLawFirm = () => {
   </div>
 
   <div className="law-reader-mark" aria-hidden="true">
-    <span>LAW</span>
-    <strong>LIVE</strong>
+    <span>LIVE</span>
+    <strong>LAW</strong>
     <span>READER</span>
     <div className="law-reader-rule" />
     <small>READ. LEARN. DISCOVER.</small>
