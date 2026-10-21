@@ -101,7 +101,7 @@ export default function PanafPublishing() {
       <header className="pub-header">
         <a className="pub-brand" href="/">
           PANAF<span>.</span>
-          <small>PUBLISHING COMPANY</small>
+          <small>LawLords Publications</small>
         </a>
 
         <nav className="pub-nav">
@@ -373,9 +373,9 @@ export default function PanafPublishing() {
     </span>
 
     <h2>
-      Meet Law
+      Meet Live
       <br />
-      Live <em>Reader.</em>
+      Law<em>Reader.</em>
     </h2>
 
     <p>
