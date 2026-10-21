@@ -229,7 +229,7 @@ export default function PanafPublishing() {
             <div className="pub-service-icon">⌘</div>
             <h3>Discover more to read</h3>
             <p>
-              Explore Law Live Reader, our digital reading
+              Explore Live Law Reader, our digital reading
               platform featuring general books and legal
               materials.
             </p>
@@ -238,7 +238,7 @@ export default function PanafPublishing() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Explore Law Live Reader <span>↗</span>
+              Explore Live Law Reader <span>↗</span>
             </a>
           </article>
         </div>
@@ -347,7 +347,7 @@ export default function PanafPublishing() {
     <div className="pub-llr-app-card">
       <img
         src="/law-live-reader-logo.png"
-        alt="Law Live Reader app logo"
+        alt="Live Law Reader app logo"
         className="pub-llr-logo"
       />
 
@@ -358,7 +358,7 @@ export default function PanafPublishing() {
       <h3>Knowledge, within reach.</h3>
 
       <span className="pub-llr-app-footer">
-        LAW LIVE READER
+        Live Law Reader
       </span>
     </div>
 
@@ -379,7 +379,7 @@ export default function PanafPublishing() {
     </h2>
 
     <p>
-      Take your reading further with Law Live Reader,
+      Take your reading further with Live Law Reader,
       a digital reading platform for discovering books
       and reading materials. Explore the app and find
       your next read.

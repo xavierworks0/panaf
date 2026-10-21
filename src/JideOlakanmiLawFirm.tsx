@@ -149,7 +149,7 @@ const JideOlakanmiLawFirm = () => {
     </h2>
 
     <p>
-      Discover Law Live Reader, a digital reading platform
+      Discover Live Law Reader, a digital reading platform
       bringing general books and legal materials together
       in one place.
     </p>
@@ -160,7 +160,7 @@ const JideOlakanmiLawFirm = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      Explore Law Live Reader <span>↗</span>
+      Explore Live Law Reader <span>↗</span>
     </a>
   </div>
 
