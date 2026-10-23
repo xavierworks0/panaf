@@ -38,16 +38,15 @@ const businesses = [
   
     href: '/businesses/panaf-farms',
   },
-  {
-    number: '04',
-    category: 'PUBLISHING',
-    name: 'LawLords Publications',
-    description:
-      'Bringing ideas, knowledge and stories to life through thoughtful publishing.',
-    image:
-      'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=1200&q=85',
-    href: '/businesses/panaf-publishing-company',
-  },
+{
+  number: '04',
+  category: 'PUBLISHING',
+  name: 'LawLords Publications',
+  description:
+    'Bringing ideas, knowledge and stories to life through thoughtful publishing.',
+  image: '/lawlords-publications-logo.png',
+  href: '/businesses/panaf-publishing-company',
+},
   {
     number: '05',
     category: 'REAL ESTATE',
