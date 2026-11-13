@@ -5,6 +5,9 @@ import PanafRealEstate from './PanafRealEstate'
 import PanafFarms from './PanafFarms'
 import PanafPublishing from './PanafPublishing'
 import JideOlakanmiLawFirm from './JideOlakanmiLawFirm'
+import ThemeToggle from './ThemeToggle'
+import './readability.css'
+import { useState } from 'react'
 const businesses = [
   {
     number: '01',
@@ -70,6 +73,9 @@ const businesses = [
 ]
 
 function App() {
+  const [contactSent, setContactSent] = useState(false)
+  const [contactMailto, setContactMailto] = useState('')
+  const [contactGmail, setContactGmail] = useState('')
   if (
   window.location.pathname.replace(/\/+$/, '') ===
   '/businesses/panaf-farms'
@@ -122,6 +128,7 @@ if (
           <a className="nav-button" href="#contact">
             Get in touch ↗
           </a>
+          <ThemeToggle />
         </nav>
       </header>
 
@@ -399,9 +406,24 @@ if (
 
         <form
           className="contact-form"
-          action="mailto:panafpress2010@yahoo.com"
-          method="post"
-          encType="text/plain"
+          onSubmit={(event) => {
+            event.preventDefault()
+            const form = event.currentTarget
+            if (!form.reportValidity()) return
+            const data = new FormData(form)
+            const subject = encodeURIComponent(`PANAF website enquiry: ${String(data.get('Enquiry') || 'General enquiry')}`)
+            const body = encodeURIComponent(
+              `Name: ${data.get('Name')}\nEmail: ${data.get('Email')}\nEnquiry: ${data.get('Enquiry')}\n\nMessage:\n${data.get('Message')}`,
+            )
+            const mailtoUrl = `mailto:panafpress2010@yahoo.com?subject=${subject}&body=${body}`
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent('panafpress2010@yahoo.com')}&su=${subject}&body=${body}`
+            setContactMailto(mailtoUrl)
+            setContactGmail(gmailUrl)
+            setContactSent(true)
+            // Keep the native email-app action for visitors whose desktop has
+            // a mail handler configured. Visible fallbacks are rendered below.
+            window.location.assign(mailtoUrl)
+          }}
         >
           <p className="form-heading">SEND US AN ENQUIRY</p>
 
@@ -450,9 +472,19 @@ if (
             SEND ENQUIRY ↗
           </button>
 
-          <p className="form-note">
-            Your email application will open to send the message.
+          <p className="form-note" role="status" aria-live="polite">
+            {contactSent
+              ? 'Your enquiry has been prepared. If your email application did not open, use one of the options below.'
+              : 'Your email application will open with your enquiry ready to send.'}
           </p>
+          {contactSent && contactMailto && (
+            <div className="form-fallback-links">
+              <a href={contactMailto}>Open email draft</a>
+              <a href={contactGmail} target="_blank" rel="noopener noreferrer">
+                Open in Gmail
+              </a>
+            </div>
+          )}
         </form>
       </section>
 

@@ -1,5 +1,6 @@
 
 import './JideOlakanmiLawFirm.css'
+import ThemeToggle from './ThemeToggle'
 
 const JideOlakanmiLawFirm = () => {
   return (
@@ -16,6 +17,7 @@ const JideOlakanmiLawFirm = () => {
           <a href="#law-contact" className="law-nav-cta">
             Contact Us ↗
           </a>
+          <ThemeToggle />
         </nav>
       </header>
 

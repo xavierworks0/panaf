@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import './PanafFarms.css'
+import ThemeToggle from './ThemeToggle'
 
 const farmAreas = [
   {
@@ -119,6 +120,7 @@ useEffect(() => {
   </nav>
 
   <div className="farms-header-actions">
+    <ThemeToggle />
     <a className="farms-back" href="/#businesses">
       ← ALL BUSINESSES
     </a>
