@@ -1,6 +1,7 @@
 
 import './PanafMarket.css'
 import { useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const categories = [
   {
@@ -163,9 +164,12 @@ const filteredCategories = categories.filter((category) => {
           PANAF<span>.</span><small>GROUP</small>
         </a>
 
-        <a className="market-back" href="/#businesses">
-          ← ALL BUSINESSES
-        </a>
+        <div className="market-header-actions">
+          <ThemeToggle />
+          <a className="market-back" href="/#businesses">
+            ← ALL BUSINESSES
+          </a>
+        </div>
       </header>
 
       <section className="market-hero">
@@ -479,8 +483,14 @@ const filteredCategories = categories.filter((category) => {
           </h2>
 
           <p>
-            Contact PANAF for enquiries about Panaf Market. For product
-            availability, please confirm details directly before visiting.
+            Contact PANAF for enquiries about Panaf Market. We can help direct
+            buyers to participating traders and confirm how to reach them.
+            For product availability, please confirm details before visiting.
+          </p>
+          <p className="market-vendor-note">
+            Vendor phone numbers and email addresses will be published here
+            once each trader has provided and approved their business contact
+            details. We do not publish unverified personal numbers.
           </p>
         </div>
 

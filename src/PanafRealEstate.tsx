@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import './PanafRealEstate.css'
+import ThemeToggle from './ThemeToggle'
 
 const services = [
   {
@@ -129,6 +130,7 @@ export default function PanafRealEstate() {
           <a href="#estate-contact">Contact</a>
         </nav>
 
+        <ThemeToggle />
         <a className="estate-header-cta" href="#estate-contact">
           Discuss a property <span>↗</span>
         </a>
@@ -392,9 +394,29 @@ export default function PanafRealEstate() {
 
         <form
           className="estate-form"
-          action="mailto:panafpress2010@yahoo.com"
-          method="post"
-          encType="text/plain"
+          onSubmit={(event) => {
+            event.preventDefault()
+            const form = event.currentTarget
+            if (!form.reportValidity()) return
+
+            const data = new FormData(form)
+            const subject = encodeURIComponent(
+              `PANAF Real Estate enquiry: ${String(data.get('Property service') || 'Property enquiry')}`,
+            )
+            const body = encodeURIComponent(
+              [
+                `Name: ${data.get('Name') || ''}`,
+                `Email: ${data.get('Email') || ''}`,
+                `Property service: ${data.get('Property service') || ''}`,
+                `Preferred location: ${data.get('Location') || 'Not specified'}`,
+                '',
+                `Message: ${data.get('Message') || ''}`,
+              ].join('\n'),
+            )
+
+            window.location.href =
+              `mailto:panafpress2010@yahoo.com?subject=${subject}&body=${body}`
+          }}
         >
           <span className="estate-form-title">PROPERTY ENQUIRY</span>
 

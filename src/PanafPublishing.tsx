@@ -1,5 +1,6 @@
 
 import './PanafPublishing.css'
+import ThemeToggle from './ThemeToggle'
 
 const CONTACT_EMAIL = 'panafpress2010@yahoo.com'
 
@@ -110,6 +111,7 @@ export default function PanafPublishing() {
           <a href="#about-publishing">About us</a>
         </nav>
 
+        <ThemeToggle />
         <a className="pub-header-cta" href={publishingEmail}>
           Publish with us <span>↗</span>
         </a>

@@ -1028,3 +1028,101 @@
     font-size: 12px;
   }
 }
+
+/* Readability improvements: maintain the existing layout while increasing
+   small labels and body copy to comfortable sizes. */
+.market-page { font-size: 16px; }
+.market-back, .market-footer > a:last-child { font-size: 12px; }
+.market-eyebrow { font-size: 12px; }
+.market-hero-description { font-size: clamp(16px, 1.35vw, 18px); }
+.market-section-label { font-size: 11px; }
+.market-intro-copy p,
+.market-categories-heading > p,
+.market-location > div:first-child > p,
+.market-contact-copy > p:last-child { font-size: 16px; }
+.market-category-copy h3 { font-size: 23px; }
+.market-category-copy p { font-size: 15px; }
+.market-subcategory h4 { font-size: 14px; }
+.market-primary-button, .market-outline-button { font-size: 12px; }
+.market-visit-check { font-size: 14px; }
+.market-visit-check-title, .market-visit-progress,
+.market-visit-panel .market-location-overline { font-size: 11px; }
+.market-faq-layout > div:first-child > p,
+.market-faq-answer { font-size: 16px; }
+.market-faq-question { font-size: 16px; }
+.market-contact-button > span:first-child { font-size: 16px; }
+.market-contact-button small { font-size: 11px; }
+.market-vendor-note { margin-top: 16px; color: var(--market-muted); font-size: 14px; line-height: 1.8; }
+.market-header-actions { display: flex; align-items: center; gap: 22px; }
+
+:root[data-theme='dark'] .market-page {
+  --market-green: #a6c4ae;
+  --market-dark: #e8eee8;
+  --market-cream: #151d18;
+  --market-white: #1d2921;
+  --market-muted: #b4c0b6;
+  --market-line: rgba(220, 235, 223, .2);
+  background: var(--market-cream);
+  color: var(--market-dark);
+}
+:root[data-theme='dark'] .market-intro,
+:root[data-theme='dark'] .market-location,
+:root[data-theme='dark'] .market-faq { background: #151d18; color: #e8eee8; }
+:root[data-theme='dark'] .market-categories { background: #1d2921; color: #e8eee8; }
+:root[data-theme='dark'] .market-contact { background: #26352b; color: #e8eee8; }
+:root[data-theme='dark'] .market-intro-copy p,
+:root[data-theme='dark'] .market-categories-heading > p,
+:root[data-theme='dark'] .market-location > div:first-child > p,
+:root[data-theme='dark'] .market-contact-copy > p:last-child,
+:root[data-theme='dark'] .market-visit-check,
+:root[data-theme='dark'] .market-faq-layout > div:first-child > p,
+:root[data-theme='dark'] .market-faq-answer { color: #c4cec6; }
+:root[data-theme='dark'] .market-visit-panel { background: #202d24; color: #e8eee8; }
+:root[data-theme='dark'] .market-filter { color: #e8eee8; border-color: #65766a; }
+:root[data-theme='dark'] .market-filter.active,
+:root[data-theme='dark'] .market-filter:hover { background: #dce9df; color: #17231b; }
+:root[data-theme='dark'] .market-faq-question { color: #e8eee8; }
+:root[data-theme='dark'] .market-subcategory-image,
+:root[data-theme='dark'] .market-category-image { background: #29372d; }
+
+@media (max-width: 700px) {
+  .market-header { flex-wrap: wrap; padding-top: 16px; padding-bottom: 16px; }
+  .market-header-actions { gap: 12px; }
+  .market-section-label { font-size: 10px; }
+  .market-intro-copy p, .market-categories-heading > p,
+  .market-location > div:first-child > p,
+  .market-contact-copy > p:last-child { font-size: 15px; }
+  .market-category-copy h3 { font-size: 21px; }
+}
+@media (max-width: 420px) {
+  .market-header-actions { width: 100%; justify-content: space-between; }
+  .market-section-label { flex-wrap: wrap; }
+  .market-hero h1 { font-size: clamp(46px, 14vw, 64px); }
+}
+
+
+/* Ensure nested market labels and controls remain legible in dark mode. */
+:root[data-theme='dark'] .market-page :is(h1, h2, h3, h4, p, li, small, label, summary, dt, dd) {
+  color: inherit;
+}
+:root[data-theme='dark'] .market-page :is(.market-category-copy, .market-subcategory, .market-visit-panel, .market-faq-item) {
+  color: #e8eee8;
+}
+:root[data-theme='dark'] .market-page :is(input, select, textarea) {
+  background: #17231b;
+  color: #e8eee8;
+  border-color: #65766a;
+}
+:root[data-theme='dark'] .market-page :is(input, select, textarea)::placeholder {
+  color: #b4c0b6;
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .market-header-actions {
+    width: auto;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+}

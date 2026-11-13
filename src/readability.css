@@ -1,0 +1,301 @@
+/* PANAF readability and theme contrast refinements. Keep these global
+   overrides last so individual page styles cannot reintroduce tiny text. */
+
+/* Main content should be comfortable to read on desktop and mobile. */
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page) p {
+  line-height: 1.7 !important;
+  font-size: max(15px, 1em) !important;
+}
+
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page) small {
+  font-size: max(13px, 1em) !important;
+  line-height: 1.5 !important;
+}
+
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page) label {
+  font-size: max(13px, 1em) !important;
+  line-height: 1.5 !important;
+}
+
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page) li {
+  font-size: max(14px, 1em) !important;
+  line-height: 1.65 !important;
+}
+
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(input, select, textarea) {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(button, .nav-button, [class*='button'], [class*='cta']) {
+  font-size: max(13px, 1em) !important;
+}
+
+/* Small editorial labels remain compact, but are no longer 7–9px. */
+:where(.hero, .businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is([class*='eyebrow'], [class*='kicker'], [class*='section-label'],
+      [class*='overline'], [class*='category'], [class*='form-title'],
+      [class*='form-heading']) {
+  font-size: max(12px, 1em) !important;
+  line-height: 1.5 !important;
+}
+
+/* Navigation and supporting card details remain readable. */
+.header nav,
+.farms-header nav,
+.estate-header nav,
+.pub-header nav,
+.law-nav {
+  font-size: max(13px, 1em) !important;
+}
+
+.theme-toggle {
+  min-height: 40px;
+  padding: 0 9px;
+  gap: 6px;
+  font-size: 10px;
+}
+
+@media (max-width: 480px) {
+  .theme-toggle {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    gap: 0;
+  }
+}
+
+/* Includes span-based section headings such as GET IN TOUCH. */
+:root[data-theme='dark']
+  :is(.businesses, .about, .careers, .contact, .footer)
+  :is(h1, h2, h3, h4, h5, p, span, small, label, li, strong, em, dt, dd, figcaption) {
+  color: #edf2ed !important;
+}
+
+:root[data-theme='dark']
+  :is(.farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(h1, h2, h3, h4, h5, p, span, small, label, li, strong, em, dt, dd, figcaption) {
+  color: #edf2ed !important;
+}
+
+:root[data-theme='dark']
+  :is(.businesses, .about, .careers, .contact, .footer,
+      .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(input, select, textarea) {
+  color: #edf2ed !important;
+  background-color: #17221b !important;
+  border-color: #526456 !important;
+}
+
+:root[data-theme='dark']
+  :is(.businesses, .about, .careers, .contact, .footer,
+      .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(input, select, textarea)::placeholder {
+  color: #b9c7bc !important;
+  opacity: 1;
+}
+
+:root[data-theme='dark'] .market-filter.active,
+:root[data-theme='dark'] .market-filter:hover {
+  color: #17231b;
+}
+
+:root[data-theme='dark'] .nav-button,
+:root[data-theme='dark'] .submit-button,
+:root[data-theme='dark'] .estate-form button,
+:root[data-theme='dark'] .law-consult-submit {
+  color: #ffffff;
+}
+
+
+.topbar { font-size: 12px; }
+.footer-bottom { font-size: 12px; line-height: 1.5; }
+@media (max-width: 600px) {
+  .topbar { font-size: 11px; }
+  .footer-bottom { font-size: 11px; }
+}
+
+
+/* Final accessibility pass: readable supporting copy across every business page. */
+:where(.businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(p, li, label, small, summary, figcaption, dt, dd,
+      [class*='note'], [class*='description'], [class*='copy'],
+      [class*='detail'], [class*='subtitle']) {
+  font-size: max(14px, 1em) !important;
+  line-height: 1.65 !important;
+}
+
+:where(.businesses, .about, .careers, .contact, .footer,
+  .farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is([class*='eyebrow'], [class*='section-label'], [class*='section-top'],
+      [class*='category'], [class*='overline'], [class*='kicker'],
+      [class*='form-title'], [class*='form-heading'], [class*='form-label']) {
+  font-size: max(12px, 1em) !important;
+  line-height: 1.5 !important;
+}
+
+/* Keep all readable copy light on dark content surfaces, including contact
+   section eyebrow labels such as "GET IN TOUCH". Hero/photo overlays are
+   intentionally excluded so their image-specific contrast is preserved. */
+:root[data-theme='dark'] :is(.businesses, .about, .careers, .contact, .footer)
+  :is(h1, h2, h3, h4, h5, p, span, small, label, li, strong, em, dt, dd,
+      figcaption, summary, a):not(.theme-toggle):not(.nav-button):not(.submit-button) {
+  color: #f1f5f1 !important;
+}
+
+:root[data-theme='dark'] :is(.farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  > section:not(:is(.farms-hero, .estate-hero, .pub-hero, .law-hero, .market-hero))
+  :is(h1, h2, h3, h4, h5, p, span, small, label, li, strong, em, dt, dd,
+      figcaption, summary, a):not([class*='button']):not([class*='cta']):not(.theme-toggle) {
+  color: #f1f5f1 !important;
+}
+
+/* Contact blocks may not all share the same section wrapper. */
+:root[data-theme='dark'] :is(.farms-contact, .estate-contact, .pub-contact,
+  .law-contact, .market-contact) :is(h1, h2, h3, h4, p, span, small, label, a, strong) {
+  color: #f1f5f1 !important;
+}
+
+:root[data-theme='dark'] :is(.farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(input, select, textarea) {
+  color: #f1f5f1 !important;
+  background-color: #17221b !important;
+  border-color: #657568 !important;
+}
+
+:root[data-theme='dark'] :is(.farms-page, .estate-page, .pub-page, .law-page, .market-page)
+  :is(input, select, textarea)::placeholder {
+  color: #c5d0c7 !important;
+  opacity: 1;
+}
+
+/* Compact but still easy-to-tap theme control. */
+.theme-toggle {
+  min-height: 36px !important;
+  height: 36px;
+  padding: 0 9px !important;
+  gap: 5px !important;
+  font-size: 10px !important;
+  letter-spacing: .45px !important;
+  line-height: 1 !important;
+}
+
+.theme-toggle-icon {
+  font-size: 15px !important;
+}
+
+@media (max-width: 650px) {
+  .theme-toggle {
+    min-width: 36px !important;
+    width: 36px;
+    height: 36px;
+    min-height: 36px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  .theme-toggle-label {
+    display: none !important;
+  }
+
+  .theme-toggle-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .header { gap: 6px; }
+  .header nav { gap: 5px; }
+  .header nav .nav-button { padding-inline: 7px; font-size: 9px; }
+}
+
+/* The enquiry fallback remains visible if a desktop has no default mail app. */
+.form-fallback-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.form-fallback-links a {
+  color: #173b2d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+:root[data-theme='dark'] .form-fallback-links a {
+  color: #dcefe0 !important;
+}
+
+/* Navigation and small footer metadata remain legible at compact widths. */
+:is(.header nav, .farms-nav, .estate-nav, .pub-nav, .law-nav) a {
+  font-size: max(13px, 1em) !important;
+}
+.topbar,
+.footer-bottom {
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 600px) {
+  .topbar,
+  .footer-bottom {
+    font-size: 12px !important;
+  }
+}
+
+/* Targeted refinement: keep the homepage navigation CTA compact on all sizes. */
+.header nav .nav-button {
+  padding: 9px 13px !important;
+  min-height: 36px;
+  font-size: 12px !important;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .header nav .nav-button {
+    padding: 7px 9px !important;
+    min-height: 34px;
+    font-size: 11px !important;
+  }
+}
+
+/* The One Vision block is a dark feature section in both themes. Explicitly
+   protect every meaningful text element from inherited dark-mode colours. */
+:root[data-theme='dark'] .vision,
+:root[data-theme='dark'] .vision .vision-inner {
+  color: #f4f7f4 !important;
+}
+
+:root[data-theme='dark'] .vision .vision-inner
+  :is(h1, h2, h3, h4, p, span, small, label, li, strong, em, a:not(.outline-button)) {
+  color: #f4f7f4 !important;
+}
+
+:root[data-theme='dark'] .vision .vision-bottom p {
+  color: #d5ded7 !important;
+}
+
+:root[data-theme='dark'] .vision .eyebrow,
+:root[data-theme='dark'] .vision .eyebrow span {
+  color: #dce9de !important;
+}
+
+:root[data-theme='dark'] .vision .outline-button {
+  color: #f4f7f4 !important;
+  border-color: #aab8ad !important;
+}
