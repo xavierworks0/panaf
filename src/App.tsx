@@ -67,7 +67,7 @@ const businesses = [
     description:
       'Explore the school, its legal education programmes and further information on its official website.',
     image: '/images/panaf-paralegal-school.jpg',
-    href: 'https://panafparalegal.edu.ng/',
+    href: 'https://panafparalegal.vercel.app',
     external: true,
   },
 ]
@@ -513,7 +513,7 @@ if (
             </a>
             <a href="tel:+2348023400164">08023400164</a>
             <a
-              href="https://panafparalegal.edu.ng/"
+              href="https://panafparalegal.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
             >

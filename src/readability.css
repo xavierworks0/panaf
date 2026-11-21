@@ -299,3 +299,70 @@
   color: #f4f7f4 !important;
   border-color: #aab8ad !important;
 }
+
+/* Final requested homepage contrast and form-spacing refinements. */
+:root[data-theme='dark'] .hero .hero-copy,
+:root[data-theme='dark'] .hero .hero-copy :is(h1, p, .eyebrow, .eyebrow span),
+:root[data-theme='dark'] .hero .hero-copy h1 span,
+:root[data-theme='dark'] .hero .hero-coordinate,
+:root[data-theme='dark'] .hero .hero-counter {
+  color: #f5f8f5 !important;
+}
+
+:root[data-theme='dark'] .hero .hero-copy .light-button {
+  color: #f5f8f5 !important;
+  background: #203329 !important;
+  border: 1px solid #c7d8cb;
+}
+
+:root[data-theme='dark'] .community .section-heading h2 em,
+:root[data-theme='dark'] .newsroom .section-heading h2 em {
+  color: #c9e8cf !important;
+}
+
+/* Give form controls breathing room inside their borders on every viewport. */
+.contact-form :is(input, select, textarea) {
+  padding: 13px 12px !important;
+  margin-top: 8px !important;
+  border: 1px solid #c8cec5 !important;
+  border-radius: 3px !important;
+  background: rgba(255, 255, 255, 0.38);
+}
+
+:root[data-theme='dark'] .contact-form :is(input, select, textarea) {
+  background: #172019 !important;
+  border-color: #657568 !important;
+  color: #f1f5f1 !important;
+}
+
+.contact-form label { margin-bottom: 18px; }
+
+/* Keep the primary header contact action proportionate on desktop and mobile. */
+.header nav .nav-button {
+  padding: 8px 11px !important;
+  min-height: 32px !important;
+  font-size: 11px !important;
+}
+@media (max-width: 650px) {
+  .header nav .nav-button {
+    padding: 7px 8px !important;
+    min-height: 30px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* Keep the law-firm hero calls to action visually balanced. */
+.law-button-primary {
+  padding: 12px 15px !important;
+  gap: 12px !important;
+  min-height: 38px;
+  font-size: 11px !important;
+}
+.law-nav-cta {
+  padding: 9px 13px !important;
+  font-size: 11px !important;
+}
+@media (max-width: 650px) {
+  .law-button-primary { padding: 11px 13px !important; }
+  .law-nav-cta { padding: 8px 10px !important; }
+}
